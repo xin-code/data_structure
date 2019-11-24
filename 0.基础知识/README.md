@@ -70,4 +70,4 @@ for(int i=0;i<n;++i)     			     while(条件)
 - 顺序存储结构  //更适合随机存储  
 - 链式存储结构    
 ---
-:bookmark:By:zxg
+:bookmark:By:zxg  
