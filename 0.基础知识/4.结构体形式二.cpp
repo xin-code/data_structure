@@ -6,6 +6,7 @@ typedef struct School
 	struct School *front;	//定义头指针
 	struct School *rear;	//定义尾指针
 }School;	//定义一个School类型的结构体
+
 #include <stdio.h>
 void main()
 {

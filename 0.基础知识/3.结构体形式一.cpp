@@ -1,4 +1,5 @@
 //定义结构体student
+
 typedef struct
 {
 	int age;

@@ -11,7 +11,6 @@ void main()
 }
 */
 
-
 /*
 #include<stdio.h>
 int result = 0;
@@ -27,7 +26,6 @@ void main()
 //这是对result直接取值，即result=0; 
 //并没有对取到循环里的值
 */
-
 
 #include<stdio.h>
 int result = 0;

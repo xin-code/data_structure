@@ -1,6 +1,7 @@
 //基本类型
 //数值类型:int short long double float
 //字符类型:char
+
 #include <stdio.h>
 void main()
 {
