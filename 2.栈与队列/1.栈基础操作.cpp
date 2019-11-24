@@ -1,6 +1,5 @@
 栈
 //顺序栈
-
 初始化栈
 int stack[maxSize];
 int top=-1;
@@ -24,7 +23,6 @@ top==-1;为真
 
 栈满：
 top==maxSize-1;为真
-
 
 //链栈
 初始化带头结点的单链表：

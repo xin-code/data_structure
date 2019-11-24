@@ -22,5 +22,4 @@ int 求值(float 操作数1,char op,float 操作数2,float &result)
 		}
 	}
 	return 1;						//成功
-
 }

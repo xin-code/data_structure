@@ -74,5 +74,4 @@ int 调用函数(float s1[],int &top1,char s2[],int &top2)
 		std::cout<<"ERROR"<<std::end1;
 	s1[++top1]=result;
 	return flag;
-
 }
