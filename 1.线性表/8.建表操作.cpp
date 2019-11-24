@@ -1,4 +1,4 @@
-顺序表建表
+//顺序表建表
 int A[maxSize];							//定义一个长度为maxSize的A数组
 int length;								//顺序表长度
 int creatList(int A[],int &length)		//int A[]=引用型
@@ -11,7 +11,6 @@ int creatList(int A[],int &length)		//int A[]=引用型
 	return 1;
 
 }
-
 
 尾插法建表（单链表）
 //尾插法
