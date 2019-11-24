@@ -10,6 +10,7 @@ for(int i=0;i<n;++i)		//循环
 		maxID=i;			//最大值标记变成i
 	}
 }
+
 //取最小值
 int min=a[0];
 int minID=0;
@@ -36,6 +37,7 @@ while(p!==NULL)
 	}
 	p=p->next;				//继续往下走
 }
+
 //取最小值
 LNode *p,*q;
 int min=head->next->data;

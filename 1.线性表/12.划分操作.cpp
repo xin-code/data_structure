@@ -28,8 +28,6 @@ void main 划分(int arr[],int n)
 	arr[i]=temp;					//枢轴的值赋给当前数组i位置
 }
 
-
-
 在顺序表中，添加一个compare变量进行比较，枢轴（temp的值）还是元素的第一个，将顺序表划分为左右部分
 顺序：	小<枢轴<大
 只不过添加了一个compare进行比较
@@ -60,8 +58,6 @@ void main 划分(int arr[],int n，int comp)
 	}
 	arr[i]=temp;					//枢轴的值赋给当前数组i位置
 }
-
-
 
 在顺序表中，借用一个数组下表k为枢轴进行比较，将顺序表划分为左右部分
 顺序：	小<枢轴<大
@@ -96,4 +92,5 @@ void main 划分(int arr[],int n，int k)
 	}
 	arr[i]=temp;					//枢轴的值赋给当前数组i位置
 }
+
 
