@@ -16,5 +16,4 @@ void 执行前序线索二叉树(TBTNode *tbt)
 			p=p->rchild;
 		}
 	}
-
 }

@@ -1,5 +1,4 @@
-//后序线索二叉树
-
+后序线索二叉树
 //TBTNode *p定义了一个p遍历指针 用来遍历二叉树
 //TBTNode *&pre定义pre指针用来记录p遍历指针的前驱结点
 void 后序线索二叉树(TBTNode *p,TBTNode *&pre)
