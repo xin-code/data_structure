@@ -23,6 +23,7 @@ typedef struct
 Str s;
 s.length=L;     //存储一个长度为L的串
 s.ch=(char*)malloc((L+1)*sizeof(char));   //分配存储空间
+
 s.ch[length范围内的位置]=某字符变量;
 某字符变量=s.ch[length范围内的位置];
 free(s.ch);

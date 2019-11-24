@@ -7,7 +7,7 @@ int add(int a,int b)
 void main()
 {
 	int result=add(1,2);
-	printf("½á¹ûÊÇ£º%d",result);
+	printf("ç»“æœæ˜¯ï¼š%d",result);
 }
 */
 
@@ -22,21 +22,21 @@ void getResult(int r)
 void main()
 {
 	getResult(result);
-	printf("µÃµ½µÄ½á¹ûÊÇ:%d\n",result);
+	printf("å¾—åˆ°çš„ç»“æœæ˜¯:%d\n",result);
 }
-//ÕâÊÇ¶ÔresultÖ±½ÓÈ¡Öµ£¬¼´result=0; 
-//²¢Ã»ÓĞ¶ÔÈ¡µ½Ñ­»·ÀïµÄÖµ
+//è¿™æ˜¯å¯¹resultç›´æ¥å–å€¼ï¼Œå³result=0; 
+//å¹¶æ²¡æœ‰å¯¹å–åˆ°å¾ªç¯é‡Œçš„å€¼
 */
 
 
 #include<stdio.h>
 int result = 0;
-void getResult(int &r)		//ÕâÀïµÄrÊÇÒ»¸öĞÎ²Î ÊÇÊ²Ã´ÎŞËùÎ½
+void getResult(int &r)		//è¿™é‡Œçš„ræ˜¯ä¸€ä¸ªå½¢å‚ æ˜¯ä»€ä¹ˆæ— æ‰€è°“
 {
 	++r;
 }
 void main()
 {
-	getResult(result);		//ÕâÀïµÄÊÇµ÷ÓÃgetResultº¯Êı,È»ºó°Ñresult´«ÈërÖĞ,È»ºó½øĞĞ×ÔÔö1²Ù×÷
-	printf("µÃµ½µÄ½á¹ûÊÇ:%d\n",result);		//ËùÒÔ½á¹ûÊÇ1
+	getResult(result);		//è¿™é‡Œçš„æ˜¯è°ƒç”¨getResultå‡½æ•°,ç„¶åæŠŠresultä¼ å…¥rä¸­,ç„¶åè¿›è¡Œè‡ªå¢1æ“ä½œ
+	printf("å¾—åˆ°çš„ç»“æœæ˜¯:%d\n",result);		//æ‰€ä»¥ç»“æœæ˜¯1
 }

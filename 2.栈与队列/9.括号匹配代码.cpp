@@ -1,5 +1,5 @@
-判断括号是否匹配
-int 是否匹配(char left,char right)
+鍒ゆ柇鎷彿鏄惁鍖归厤
+int 鏄惁鍖归厤(char left,char right)
 {
 	if(left=='('&&right==')')
 		return 1;
@@ -11,20 +11,20 @@ int 是否匹配(char left,char right)
 		return 0;
 }
 
-int 括号(char 表达式[])
+int 鎷彿(char 琛ㄨ揪寮廩])
 {
 	char s[maxSize];
 	int top=-1;
-	for(int i=0;表达式[i]='\0',++i)
+	for(int i=0;琛ㄨ揪寮廩i]='\0',++i)
 	{
-		if(表达式[i]=='('||表达式[i]=='['||表达式[i]=='{'|)
-			s[++top]=表达式[i];
-		if(表达式[i]==')'||表达式[i]==']'||表达式[i]=='}'|)
+		if(琛ㄨ揪寮廩i]=='('||琛ㄨ揪寮廩i]=='['||琛ㄨ揪寮廩i]=='{'|)
+			s[++top]=琛ㄨ揪寮廩i];
+		if(琛ㄨ揪寮廩i]==')'||琛ㄨ揪寮廩i]==']'||琛ㄨ揪寮廩i]=='}'|)
 		{
 			if(top==-1)
 				return 0;
 			char left=s[top--];
-			if(是否匹配(left,表达式[i])==0)
+			if(鏄惁鍖归厤(left,琛ㄨ揪寮廩i])==0)
 				return 0;
 		}
 	}

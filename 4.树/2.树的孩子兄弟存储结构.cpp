@@ -1,4 +1,4 @@
-//定义结构体
+//鏍戠殑瀛╁瓙鍏勫紵瀛樺偍缁撴瀯
 typedef struct BTNode
 {
 	int data;

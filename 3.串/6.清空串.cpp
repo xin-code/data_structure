@@ -1,10 +1,10 @@
-int Çå¿Õ´®(Str &str)
+int æ¸…ç©ºä¸²(Str &str)
 {
-	if(str.ch)				//Èç¹û´®ÄÚÓÃÊıÖµ
+	if(str.ch)				//å¦‚æœä¸²å†…ç”¨æ•°å€¼
 	{
-		free(str.ch);		//ÊÍ·Å
+		free(str.ch);		//é‡Šæ”¾
 		str.ch=NULL;		
 	}
-	str.length=0;			//´®µÄ³¤¶ÈÎª0
-	return 1;				//³É¹¦
+	str.length=0;			//ä¸²çš„é•¿åº¦ä¸º0
+	return 1;				//æˆåŠŸ
 }

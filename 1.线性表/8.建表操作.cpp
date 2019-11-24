@@ -1,52 +1,52 @@
-Ë³Ðò±í½¨±í
-int A[maxSize];							//¶¨ÒåÒ»¸ö³¤¶ÈÎªmaxSizeµÄAÊý×é
-int length;								//Ë³Ðò±í³¤¶È
-int creatList(int A[],int &length)		//int A[]=ÒýÓÃÐÍ
+é¡ºåºè¡¨å»ºè¡¨
+int A[maxSize];							//å®šä¹‰ä¸€ä¸ªé•¿åº¦ä¸ºmaxSizeçš„Aæ•°ç»„
+int length;								//é¡ºåºè¡¨é•¿åº¦
+int creatList(int A[],int &length)		//int A[]=å¼•ç”¨åž‹
 {
-	std::cin>>length;					//ÊäÈëlength³¤¶È
-	if(length>maxSize)					//Èç¹û³¬¹ý×î´óÖµ
-		return 0;						//Ê§°Ü·µ»Ø0
-	for(int i=0;i<length;++i)			//Ñ­»·ÊäÈë
+	std::cin>>length;					//è¾“å…¥lengthé•¿åº¦
+	if(length>maxSize)					//å¦‚æžœè¶…è¿‡æœ€å¤§å€¼
+		return 0;						//å¤±è´¥è¿”å›ž0
+	for(int i=0;i<length;++i)			//å¾ªçŽ¯è¾“å…¥
 		std::cin>>A[i];
 	return 1;
 
 }
 
 
-Î²²å·¨½¨±í£¨µ¥Á´±í£©
-//Î²²å·¨
-void creatLinkListR(Lnode *&head)			//*&headÖ¸Õë
+å°¾æ’æ³•å»ºè¡¨ï¼ˆå•é“¾è¡¨ï¼‰
+//å°¾æ’æ³•
+void creatLinkListR(Lnode *&head)			//*&headæŒ‡é’ˆ
 {
-	head=(LNode*)malloc(sizeof(LNode));		//ÉêÇë´øÍ·½áµãµÄµ¥Á´±í´æ´¢¿Õ¼ä
+	head=(LNode*)malloc(sizeof(LNode));		//ç”³è¯·å¸¦å¤´ç»“ç‚¹çš„å•é“¾è¡¨å­˜å‚¨ç©ºé—´
 	head->next=NULL;
 	LNode *p=NULL;
-	LNode *r=head;								//rÖ¸ÕëÊ¼ÖÕÖ¸ÏòÎ²²¿½áµã£¬ÒòÎª¸ÕÉêÇëµÄ¿Õ¼äÄÚhead¾ÍÎªÎ²½áµã
-	int n;										//½áµã¸öÊýn
-	std::cin>>n;								//ÊäÈën
-	for(int i=0;i<n;++i)						//Ñ­»·
+	LNode *r=head;								//ræŒ‡é’ˆå§‹ç»ˆæŒ‡å‘å°¾éƒ¨ç»“ç‚¹ï¼Œå› ä¸ºåˆšç”³è¯·çš„ç©ºé—´å†…headå°±ä¸ºå°¾ç»“ç‚¹
+	int n;										//ç»“ç‚¹ä¸ªæ•°n
+	std::cin>>n;								//è¾“å…¥n
+	for(int i=0;i<n;++i)						//å¾ªçŽ¯
 	{
-		p=(LNode*)malloc(sizeof(LNode));		//ÉêÇëÒ»¸öp£¬¿ÉÒÔÁ¬½Óµ½ÏÂÒ»¸ö·½ÏòÉÏ
+		p=(LNode*)malloc(sizeof(LNode));		//ç”³è¯·ä¸€ä¸ªpï¼Œå¯ä»¥è¿žæŽ¥åˆ°ä¸‹ä¸€ä¸ªæ–¹å‘ä¸Š
 		p->next=NULL;
-		std::cin>>p->data;						//Ñ­»·ÊäÈëdataµÄÖµ
+		std::cin>>p->data;						//å¾ªçŽ¯è¾“å…¥dataçš„å€¼
 		p->next=r->next;
 		r->next=p;
-		r=p;									//p½áµã¾ÍÊÇ×îºóÒ»¸ö½áµãËùÒÔ¸³Öµ¸ør
+		r=p;									//pç»“ç‚¹å°±æ˜¯æœ€åŽä¸€ä¸ªç»“ç‚¹æ‰€ä»¥èµ‹å€¼ç»™r
 	}
 }
 
-//Í·²å·¨
-void creatLinkListH(Lnode *&head)			//*&headÖ¸Õë
+//å¤´æ’æ³•
+void creatLinkListH(Lnode *&head)			//*&headæŒ‡é’ˆ
 {
-	head=(LNode*)malloc(sizeof(LNode));		//ÉêÇë´øÍ·½áµãµÄµ¥Á´±í´æ´¢¿Õ¼ä
+	head=(LNode*)malloc(sizeof(LNode));		//ç”³è¯·å¸¦å¤´ç»“ç‚¹çš„å•é“¾è¡¨å­˜å‚¨ç©ºé—´
 	head->next=NULL;
 	LNode *p=NULL;
-	int n;										//½áµã¸öÊýn
-	std::cin>>n;								//ÊäÈën
-	for(int i=0;i<n;++i)						//Ñ­»·
+	int n;										//ç»“ç‚¹ä¸ªæ•°n
+	std::cin>>n;								//è¾“å…¥n
+	for(int i=0;i<n;++i)						//å¾ªçŽ¯
 	{
-		p=(LNode*)malloc(sizeof(LNode));		//ÉêÇëÒ»¸öp£¬¿ÉÒÔÁ¬½Óµ½ÏÂÒ»¸ö·½ÏòÉÏ
+		p=(LNode*)malloc(sizeof(LNode));		//ç”³è¯·ä¸€ä¸ªpï¼Œå¯ä»¥è¿žæŽ¥åˆ°ä¸‹ä¸€ä¸ªæ–¹å‘ä¸Š
 		p->next=NULL;
-		std::cin>>p->data;						//Ñ­»·ÊäÈëdataµÄÖµ
+		std::cin>>p->data;						//å¾ªçŽ¯è¾“å…¥dataçš„å€¼
 		p->next=head->next;
 		head->next=p;
 	}

@@ -1,27 +1,27 @@
-//¶¨ÒåÒ»¸ö¿ÉÒÔ¸Ä±äµÄÒıÓÃĞÍ&str×Ü´®
-//¶¨Òås1´®ºÍs2´®
-int ´®Á¬½Ó(Str &str,Str s1,Str s2)
+//å®šä¹‰ä¸€ä¸ªå¯ä»¥æ”¹å˜çš„å¼•ç”¨å‹&stræ€»ä¸²
+//å®šä¹‰s1ä¸²å’Œs2ä¸²
+int ä¸²è¿æ¥(Str &str,Str s1,Str s2)
 {
-	if(str.ch)													//³õÊ¼»¯
+	if(str.ch)													//åˆå§‹åŒ–
 	{
 		free (str.ch);
 		str.ch=NULL;
 	}
-	str.ch=(char *)malloc(sizeof(char)*(s1.length+s2.length+1));//ÉêÇë¿Õ¼ä's1.length+s2.length+1'¡®+1¡¯ÊÇÒòÎª½áÊø±ê¼Ç\0
+	str.ch=(char *)malloc(sizeof(char)*(s1.length+s2.length+1));//ç”³è¯·ç©ºé—´'s1.length+s2.length+1'â€˜+1â€™æ˜¯å› ä¸ºç»“æŸæ ‡è®°\0
 	if(!str.ch)
 		return 0;
-	int i=0;													//iÓÃÀ´Ê¶±ğs1ÊÇ·ñÎª¿Õ iÎª0
-	while(i<s1.length)											//Èç¹ûs1µÄ³¤¶È²»Îª0
+	int i=0;													//iç”¨æ¥è¯†åˆ«s1æ˜¯å¦ä¸ºç©º iä¸º0
+	while(i<s1.length)											//å¦‚æœs1çš„é•¿åº¦ä¸ä¸º0
 	{
-		str.ch[i]=s1.ch[i];										//°Ñs1µÄÄÚÈİ¸³¸ø×Ü´®
-		++i;													//iºóÒÆÒ»Î»
+		str.ch[i]=s1.ch[i];										//æŠŠs1çš„å†…å®¹èµ‹ç»™æ€»ä¸²
+		++i;													//iåç§»ä¸€ä½
 	}
 	int j=0;
 	while(j<=s2.length)
 	{
-		str.ch[i+j]=s2.ch[j];									//°Ñs2µÄÄÚÈİ¸³¸ø×Ü´®£¨×Ü´®µÄÎ»ÖÃÊÇ´ÓiÍùºóÒÆ¶¯µÄ£©
+		str.ch[i+j]=s2.ch[j];									//æŠŠs2çš„å†…å®¹èµ‹ç»™æ€»ä¸²ï¼ˆæ€»ä¸²çš„ä½ç½®æ˜¯ä»iå¾€åç§»åŠ¨çš„ï¼‰
 		++j;
 	}
-	str.length=s1.length+s2.length;								//×Ü´®µÄ³¤¶ÈÎªs1µÄ³¤¶È+s2µÄ³¤¶È
+	str.length=s1.length+s2.length;								//æ€»ä¸²çš„é•¿åº¦ä¸ºs1çš„é•¿åº¦+s2çš„é•¿åº¦
 	return 1;
 }

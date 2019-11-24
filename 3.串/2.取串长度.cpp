@@ -1,4 +1,4 @@
-int 去串长度(Str str)	//定义Str的变量str
+int 鍘讳覆闀垮害(Str str)	//瀹氫箟Str鐨勫彉閲弒tr
 {
-	return str.length;	//返回str.lenth长度
+	return str.length;	//杩斿洖str.lenth闀垮害
 }

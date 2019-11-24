@@ -1,27 +1,27 @@
-//Ç°ÐòÏßË÷¶þ²æÊ÷
+//å‰åºçº¿ç´¢äºŒå‰æ ‘
 
-//TBTNode *p¶¨ÒåÁËÒ»¸öp±éÀúÖ¸Õë ÓÃÀ´±éÀú¶þ²æÊ÷
-//TBTNode *&pre¶¨ÒåpreÖ¸ÕëÓÃÀ´¼ÇÂ¼p±éÀúÖ¸ÕëµÄÇ°Çý½áµã
-void Ç°ÐòÏßË÷¶þ²æÊ÷(TBTNode *p,TBTNode *&pre)
+//TBTNode *på®šä¹‰äº†ä¸€ä¸ªpéåŽ†æŒ‡é’ˆ ç”¨æ¥éåŽ†äºŒå‰æ ‘
+//TBTNode *&preå®šä¹‰preæŒ‡é’ˆç”¨æ¥è®°å½•péåŽ†æŒ‡é’ˆçš„å‰é©±ç»“ç‚¹
+void å‰åºçº¿ç´¢äºŒå‰æ ‘(TBTNode *p,TBTNode *&pre)
 {
 	if(p!=NULL)
 	{
-		Ç°ÐòÏßË÷¶þ²æÊ÷(p->lchild,pre);		//±éÀúµ÷ÓÃº¯Êý *p±éÀúÖ¸Õë±éÀú×óº¢×Ó½áµã
-		if(p->lchild==NULL)					//Èç¹û×óº¢×ÓÎª¿Õ
+		å‰åºçº¿ç´¢äºŒå‰æ ‘(p->lchild,pre);		//éåŽ†è°ƒç”¨å‡½æ•° *péåŽ†æŒ‡é’ˆéåŽ†å·¦å­©å­ç»“ç‚¹
+		if(p->lchild==NULL)					//å¦‚æžœå·¦å­©å­ä¸ºç©º
 		{
-			p->lchild=pre;					//¡¾Èç¹û×óº¢×ÓÎª¿Õ¡¿¾Í°ÑpµÄ×óº¢×ÓÖ¸ÏòÇ°Çý½áµã
-			p->lTag=1;						//¡¾Èç¹û×óº¢×ÓÎª¿Õ¡¿¾Í°ÑpµÄ×ó±ê¼ÇÉèÖÃ³É1
+			p->lchild=pre;					//ã€å¦‚æžœå·¦å­©å­ä¸ºç©ºã€‘å°±æŠŠpçš„å·¦å­©å­æŒ‡å‘å‰é©±ç»“ç‚¹
+			p->lTag=1;						//ã€å¦‚æžœå·¦å­©å­ä¸ºç©ºã€‘å°±æŠŠpçš„å·¦æ ‡è®°è®¾ç½®æˆ1
 		}
-		if(pre!=NULL&&pre->rchild==NULL)	//Èç¹ûÓÒº¢×ÓÎª¿Õ
+		if(pre!=NULL&&pre->rchild==NULL)	//å¦‚æžœå³å­©å­ä¸ºç©º
 		{
-			pre->rchild=p;					//¡¾Èç¹ûÓÒº¢×ÓÎª¿Õ¡¿¾Í°ÑpµÄÓÒº¢×ÓÖ¸ÏòÇ°Çý½áµã
-			pre->rTag=1;					//¡¾Èç¹ûÓÒº¢×ÓÎª¿Õ¡¿¾Í°ÑpµÄÓÒ±ê¼ÇÉèÖÃ³É1
+			pre->rchild=p;					//ã€å¦‚æžœå³å­©å­ä¸ºç©ºã€‘å°±æŠŠpçš„å³å­©å­æŒ‡å‘å‰é©±ç»“ç‚¹
+			pre->rTag=1;					//ã€å¦‚æžœå³å­©å­ä¸ºç©ºã€‘å°±æŠŠpçš„å³æ ‡è®°è®¾ç½®æˆ1
 		}
-		pre=p;								//preµÄÖµ¸úÉÏp
-		if(p->lTag==0)						//Èç¹ûp±éÀúÖ¸ÕëµÄ×ó±ê¼ÇÎª¿Õ
-		Ç°ÐòÏßË÷¶þ²æÊ÷(p->lchild,pre);		//±éÀúµ÷ÓÃº¯Êý *p±éÀúÖ¸Õë±éÀú×óº¢×Ó½áµã
-		if(p->rTag==0)						//Èç¹ûp±éÀúÖ¸ÕëµÄÓÒ±ê¼ÇÎª¿Õ
-		Ç°ÐòÏßË÷¶þ²æÊ÷(p->rchild,pre);		//±éÀúµ÷ÓÃº¯Êý *p±éÀúÖ¸Õë±éÀúÓÒº¢×Ó½áµã
+		pre=p;								//preçš„å€¼è·Ÿä¸Šp
+		if(p->lTag==0)						//å¦‚æžœpéåŽ†æŒ‡é’ˆçš„å·¦æ ‡è®°ä¸ºç©º
+		å‰åºçº¿ç´¢äºŒå‰æ ‘(p->lchild,pre);		//éåŽ†è°ƒç”¨å‡½æ•° *péåŽ†æŒ‡é’ˆéåŽ†å·¦å­©å­ç»“ç‚¹
+		if(p->rTag==0)						//å¦‚æžœpéåŽ†æŒ‡é’ˆçš„å³æ ‡è®°ä¸ºç©º
+		å‰åºçº¿ç´¢äºŒå‰æ ‘(p->rchild,pre);		//éåŽ†è°ƒç”¨å‡½æ•° *péåŽ†æŒ‡é’ˆéåŽ†å³å­©å­ç»“ç‚¹
 
 	}
 }

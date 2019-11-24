@@ -1,75 +1,75 @@
-¼ÆËãÖÐ×º±í´ïÊ½(Ò»´®Êý×ÖºÍÒ»Ð©·ûºÅ½øÐÐÇó½â×îÖÕ½á¹û)
-ÐèÒªÁ½¸ö¸¨ÖúÕ»
-Ò»¸ö·ÅÊý×Ös1
-Ò»¸ö·Å·ûºÅs2
+è®¡ç®—ä¸­ç¼€è¡¨è¾¾å¼(ä¸€ä¸²æ•°å­—å’Œä¸€äº›ç¬¦å·è¿›è¡Œæ±‚è§£æœ€ç»ˆç»“æžœ)
+éœ€è¦ä¸¤ä¸ªè¾…åŠ©æ ˆ
+ä¸€ä¸ªæ”¾æ•°å­—s1
+ä¸€ä¸ªæ”¾ç¬¦å·s2
 
-//char Êý×é[]Õâ¸öÊÇÌâÄ¿¸ø³öµÄÄÇ´®±í´ïÊ½
-float ¼ÆËãÖÐ×º±í´ïÊ½(char Êý×é[])
+//char æ•°ç»„[]è¿™ä¸ªæ˜¯é¢˜ç›®ç»™å‡ºçš„é‚£ä¸²è¡¨è¾¾å¼
+float è®¡ç®—ä¸­ç¼€è¡¨è¾¾å¼(char æ•°ç»„[])
 {
-	float	s1[maxSize];	//³õÊ¼»¯s1
+	float	s1[maxSize];	//åˆå§‹åŒ–s1
 	int top1=-1;
-	float	s2[maxSize];	//³õÊ¼»¯s2
+	float	s2[maxSize];	//åˆå§‹åŒ–s2
 	int top2=-1;
-	while(Êý×é[i]!='\0')	//µ±Êý×é[i]²»ÊÇ×îºóÒ»¸ö½áÊø±ê¼ÇµÄÊ±ºò
+	while(æ•°ç»„[i]!='\0')	//å½“æ•°ç»„[i]ä¸æ˜¯æœ€åŽä¸€ä¸ªç»“æŸæ ‡è®°çš„æ—¶å€™
 	{
-		if('0'<=Êý×é[i]&&Êý×é[i]<='9')	//Èç¹ûÊÇÊý×Ö
+		if('0'<=æ•°ç»„[i]&&æ•°ç»„[i]<='9')	//å¦‚æžœæ˜¯æ•°å­—
 		{
-			s1[++top1]=Êý×é[i]-'0';		//È¡µÃ±í´ïÊ½µÄÖµ£º×Ö·ûÐÍÊý¾Ý-×Ö·ûÐÍ'0'µÄÖµ ¾ÍÎ»¸ÃÎ»ÖÃÉÏÊý¾ÝµÄÖµ
+			s1[++top1]=æ•°ç»„[i]-'0';		//å–å¾—è¡¨è¾¾å¼çš„å€¼ï¼šå­—ç¬¦åž‹æ•°æ®-å­—ç¬¦åž‹'0'çš„å€¼ å°±ä½è¯¥ä½ç½®ä¸Šæ•°æ®çš„å€¼
 			/*
-			ÀýÈç£º×Ö·û0-×Ö·û0=ÊýÖµ0£»
-				  ×Ö·û9-×Ö·û0=ÊýÖµ9£»
+			ä¾‹å¦‚ï¼šå­—ç¬¦0-å­—ç¬¦0=æ•°å€¼0ï¼›
+				  å­—ç¬¦9-å­—ç¬¦0=æ•°å€¼9ï¼›
 			*/
-			++i;						//iºóÒÆÒ»Î»£¨×Ô×óÍùÓÒÒÆ¶¯£©
+			++i;						//iåŽç§»ä¸€ä½ï¼ˆè‡ªå·¦å¾€å³ç§»åŠ¨ï¼‰
 		}
-		else if(Êý×é[i]=='(')			//Êý×é±í´ïÊ½ÖÐ³öÏÖ[i]Îª×óÀ¨ºÅ'('
+		else if(æ•°ç»„[i]=='(')			//æ•°ç»„è¡¨è¾¾å¼ä¸­å‡ºçŽ°[i]ä¸ºå·¦æ‹¬å·'('
 		{
-			s2[++top2]='(';				//×óÀ¨ºÅÈës2Êý×éÄÚ
-			++i;						//iºóÒÆÒ»Î»£¨×Ô×óÍùÓÒÒÆ¶¯£©
+			s2[++top2]='(';				//å·¦æ‹¬å·å…¥s2æ•°ç»„å†…
+			++i;						//iåŽç§»ä¸€ä½ï¼ˆè‡ªå·¦å¾€å³ç§»åŠ¨ï¼‰
 		}
-		else if(Êý×é[i]=='+'||Êý×é[i]=='-'||Êý×é[i]=='*'||Êý×é[i]=='/')		//Èç¹ûÎª+-*/
+		else if(æ•°ç»„[i]=='+'||æ•°ç»„[i]=='-'||æ•°ç»„[i]=='*'||æ•°ç»„[i]=='/')		//å¦‚æžœä¸º+-*/
 		{
-			if(top2==-1||s2[top2]=='('||getPriority(Êý×é[i]>getPriority(s2[top2]))	//ÅÐ¶ÏÓÅÏÈ¼¶ÈôÈëÕ»µÄÓÅÏÈ¼¶´óÓÚÕ»ÄÚÓÅÏÈ¼¶ÔòÈëÕ»
+			if(top2==-1||s2[top2]=='('||getPriority(æ•°ç»„[i]>getPriority(s2[top2]))	//åˆ¤æ–­ä¼˜å…ˆçº§è‹¥å…¥æ ˆçš„ä¼˜å…ˆçº§å¤§äºŽæ ˆå†…ä¼˜å…ˆçº§åˆ™å…¥æ ˆ
 			{
-				s2[++top2]=Êý×é[i];		//Êý×é±í´ïÊ½iÎ»ÖÃÈës2·ûºÅÕ»ÄÚ
-				++i;					//iºóÒÆÒ»Î»£¨×Ô×óÍùÓÒÒÆ¶¯£©
+				s2[++top2]=æ•°ç»„[i];		//æ•°ç»„è¡¨è¾¾å¼iä½ç½®å…¥s2ç¬¦å·æ ˆå†…
+				++i;					//iåŽç§»ä¸€ä½ï¼ˆè‡ªå·¦å¾€å³ç§»åŠ¨ï¼‰
 			}
 			else
 			{
-				int flag=µ÷ÓÃº¯Êýtwo(s1,top1,s2,top2); //Èç¹ûÃ»ÓÐ´ïµ½£¨ÓÅÏÈ¼¶ÈôÈëÕ»µÄÓÅÏÈ¼¶´óÓÚÕ»ÄÚÓÅÏÈ¼¶ÔòÈëÕ»£©µÄ»°£¬È¡³öÀ´s1µÄÕ»¶¥ÔªËØ½øÐÐÔËËã
-				int(flag==0)						  //Èç¹ûflagÎª0
-					return 0;						 //·µ»ØÊ§°Ü±ê¼Ç
+				int flag=è°ƒç”¨å‡½æ•°two(s1,top1,s2,top2); //å¦‚æžœæ²¡æœ‰è¾¾åˆ°ï¼ˆä¼˜å…ˆçº§è‹¥å…¥æ ˆçš„ä¼˜å…ˆçº§å¤§äºŽæ ˆå†…ä¼˜å…ˆçº§åˆ™å…¥æ ˆï¼‰çš„è¯ï¼Œå–å‡ºæ¥s1çš„æ ˆé¡¶å…ƒç´ è¿›è¡Œè¿ç®—
+				int(flag==0)						  //å¦‚æžœflagä¸º0
+					return 0;						 //è¿”å›žå¤±è´¥æ ‡è®°
 			}
 		}
-		else if(Êý×é[i]==')')			//Êý×é±í´ïÊ½ÖÐ³öÏÖ[i]ÎªÓÒÀ¨ºÅ'£©'
+		else if(æ•°ç»„[i]==')')			//æ•°ç»„è¡¨è¾¾å¼ä¸­å‡ºçŽ°[i]ä¸ºå³æ‹¬å·'ï¼‰'
 		{
-			while(s2[top2]!='(')		//s2´æ·Å·ûºÅÊý×é²»ÊÇ×óÀ¨ºÅ
+			while(s2[top2]!='(')		//s2å­˜æ”¾ç¬¦å·æ•°ç»„ä¸æ˜¯å·¦æ‹¬å·
 			{
-				int flag=µ÷ÓÃº¯Êýtwo(s1,top1,s2,top2);	//È¡³öÀ´s1µÄÕ»¶¥ÔªËØ½øÐÐÔËËã
-					int(flag==0)					 //Èç¹ûflagÎª0
-					return 0;						 //·µ»ØÊ§°Ü±ê¼Ç
+				int flag=è°ƒç”¨å‡½æ•°two(s1,top1,s2,top2);	//å–å‡ºæ¥s1çš„æ ˆé¡¶å…ƒç´ è¿›è¡Œè¿ç®—
+					int(flag==0)					 //å¦‚æžœflagä¸º0
+					return 0;						 //è¿”å›žå¤±è´¥æ ‡è®°
 			}
-			--top2;		//s2´æ·Å·ûºÅµÄÊý×éÍ·Ö¸Õë½µµÍÒ»Î»
-			++i;		//Êý×é±í´ïÊ½ÍùÓÒÒÆ¶¯Ò»Î»
+			--top2;		//s2å­˜æ”¾ç¬¦å·çš„æ•°ç»„å¤´æŒ‡é’ˆé™ä½Žä¸€ä½
+			++i;		//æ•°ç»„è¡¨è¾¾å¼å¾€å³ç§»åŠ¨ä¸€ä½
 		}
 	}
-	while(top2!=-1)		//µ±s2´æ·Å·ûºÅÍ·Ö¸Õë²»Îª¿Õ
+	while(top2!=-1)		//å½“s2å­˜æ”¾ç¬¦å·å¤´æŒ‡é’ˆä¸ä¸ºç©º
 	{
-		int flag=µ÷ÓÃº¯Êýtwo(s1,top1,s2,top2);//È¡³öÀ´s1µÄÕ»¶¥ÔªËØ½øÐÐÔËËã
-		int(flag==0)					 //Èç¹ûflagÎª0
-		return 0;						 //·µ»ØÊ§°Ü±ê¼Ç
+		int flag=è°ƒç”¨å‡½æ•°two(s1,top1,s2,top2);//å–å‡ºæ¥s1çš„æ ˆé¡¶å…ƒç´ è¿›è¡Œè¿ç®—
+		int(flag==0)					 //å¦‚æžœflagä¸º0
+		return 0;						 //è¿”å›žå¤±è´¥æ ‡è®°
 	}
-	return s1[top1];					//¼ÆËãÍê³É·µ»Øµ½s1µÄÍ·Ö¸ÕëËùÖ¸µÄÎ»ÖÃ
+	return s1[top1];					//è®¡ç®—å®Œæˆè¿”å›žåˆ°s1çš„å¤´æŒ‡é’ˆæ‰€æŒ‡çš„ä½ç½®
 }
 
-int µ÷ÓÃº¯Êý(float s1[],int &top1,char s2[],int &top2)
+int è°ƒç”¨å‡½æ•°(float s1[],int &top1,char s2[],int &top2)
 {
-	float ²Ù×÷Êý1,²Ù×÷Êý2,result;
+	float æ“ä½œæ•°1,æ“ä½œæ•°2,result;
 	char op;
 	int flag;
-	²Ù×÷Êý2=s1[top1--];
-	²Ù×÷Êý1=s1[top1--];
+	æ“ä½œæ•°2=s1[top1--];
+	æ“ä½œæ•°1=s1[top1--];
 	op=s2[top2--];
-	flag=µ÷ÓÃÔËËã(²Ù×÷Êý1,op,²Ù×÷Êý2,result);
+	flag=è°ƒç”¨è¿ç®—(æ“ä½œæ•°1,op,æ“ä½œæ•°2,result);
 	if(flag==0)
 		std::cout<<"ERROR"<<std::end1;
 	s1[++top1]=result;

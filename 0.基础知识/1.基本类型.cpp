@@ -1,6 +1,6 @@
-//»ù±¾ÀàĞÍ
-//ÊıÖµÀàĞÍ:int short long double float
-//×Ö·ûÀàĞÍ:char
+//åŸºæœ¬ç±»å‹
+//æ•°å€¼ç±»å‹:int short long double float
+//å­—ç¬¦ç±»å‹:char
 #include <stdio.h>
 void main()
 {
@@ -9,10 +9,10 @@ void main()
 	int c,d=4;
 	a=1;
 	c=d-1;
-	printf("Êä³öaµÄÖµÎª%d\n",a);
-	printf("Êä³öbµÄÖµÎª%d\n",b);
-	printf("Êä³öcµÄÖµÎª%d\n",c);
-	printf("Êä³ödµÄÖµÎª%d\n",d);	//ÕûĞÍÓÃ%d
+	printf("è¾“å‡ºaçš„å€¼ä¸º%d\n",a);
+	printf("è¾“å‡ºbçš„å€¼ä¸º%d\n",b);
+	printf("è¾“å‡ºcçš„å€¼ä¸º%d\n",c);
+	printf("è¾“å‡ºdçš„å€¼ä¸º%d\n",d);	//æ•´å‹ç”¨%d
 	char z='x';
-	printf("Êä³özµÄ×Ö·ûÎª:%c\n",z);	//×Ö·ûĞÍÓÃ%c
+	printf("è¾“å‡ºzçš„å­—ç¬¦ä¸º:%c\n",z);	//å­—ç¬¦å‹ç”¨%c
 }

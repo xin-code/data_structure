@@ -4,11 +4,11 @@ typedef struct Lnode
 {
 	int data;
 	struct Lnode *next;
-}Lnode;		//¹¹ÔìÒ»¸öLnodeµÄ½á¹¹Ìå
+}Lnode;		//æž„é€ ä¸€ä¸ªLnodeçš„ç»“æž„ä½“
 void main()
 {
 	Lnode *L;
-	L=(Lnode *)malloc(sizeof(Lnode));		//¸øLnode·ÖÅäÒ»¸ö¿Õ¼ä
+	L=(Lnode *)malloc(sizeof(Lnode));		//ç»™Lnodeåˆ†é…ä¸€ä¸ªç©ºé—´
 	A->next=B;
 	B->next=C;
 }

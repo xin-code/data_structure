@@ -2,13 +2,13 @@ typedef struct
 {
 	int data;
 	int next;
-}SLnode;	//¶¨Òå¾²Ì¬Á´±í½á¹¹Ìå
+}SLnode;	//å®šä¹‰é™æ€é“¾è¡¨ç»“æž„ä½“
 SLnode SLink[maxSize];
-int p = Ad0;		//¶¨ÒåÒ»¸öÖ¸Õë
+int p = Ad0;		//å®šä¹‰ä¸€ä¸ªæŒ‡é’ˆ
 SLink[p].data;		//p->data;
 SLink[p].next;		//p->next;
 
 
-//ÔÚpºó²åÈë½Úµãq;
+//åœ¨påŽæ’å…¥èŠ‚ç‚¹q;
 SLink[q].next=SLink[p].next;	//q->next=p->next;
 SLink[p].next=q;				//p->next=q;

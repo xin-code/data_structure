@@ -3,9 +3,9 @@ typedef struct School
 	int age;
 	float weight;
 	char sex;
-	struct School *front;	//¶¨ÒåÍ·Ö¸Õë
-	struct School *rear;	//¶¨ÒåÎ²Ö¸Õë
-}School;	//¶¨ÒåÒ»¸öSchoolÀàĞÍµÄ½á¹¹Ìå
+	struct School *front;	//å®šä¹‰å¤´æŒ‡é’ˆ
+	struct School *rear;	//å®šä¹‰å°¾æŒ‡é’ˆ
+}School;	//å®šä¹‰ä¸€ä¸ªSchoolç±»å‹çš„ç»“æ„ä½“
 #include <stdio.h>
 void main()
 {
@@ -13,5 +13,5 @@ void main()
 	sch.age=18;
 	sch.weight=140.2;
 	sch.sex='w';
-	printf("ÄêÁä:%d\nÌåÖØ:%f\nĞÔ±ğ:%c\n",sch.age,sch.weight,sch.sex);		//Êä³ö
+	printf("å¹´é¾„:%d\nä½“é‡:%f\næ€§åˆ«:%c\n",sch.age,sch.weight,sch.sex);		//è¾“å‡º
 }

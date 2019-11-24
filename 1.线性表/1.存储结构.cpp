@@ -1,18 +1,18 @@
-//Ë³Ðò´æ´¢½á¹¹ 
-//ÓÃÊý×é±íÊ¾ 
-//´Ó0µ½length-1ÊÇÒÑ¾­´æ´¢ÊýÖµµÄ ´Ó0µ½maxSizeµÄÊÇ×Ü¹²ÄÜÈÝÄÉµÄÊýÁ¿
-int A[maxSize];		//¶¨ÒåÊý×éÎªA´óÐ¡ÎªmaxSize
-int length = 0;		//³õÊ¼»¯
+//é¡ºåºå­˜å‚¨ç»“æž„ 
+//ç”¨æ•°ç»„è¡¨ç¤º 
+//ä»Ž0åˆ°length-1æ˜¯å·²ç»å­˜å‚¨æ•°å€¼çš„ ä»Ž0åˆ°maxSizeçš„æ˜¯æ€»å…±èƒ½å®¹çº³çš„æ•°é‡
+int A[maxSize];		//å®šä¹‰æ•°ç»„ä¸ºAå¤§å°ä¸ºmaxSize
+int length = 0;		//åˆå§‹åŒ–
 
-//Á´Ê½´æ´¢½á¹¹
+//é“¾å¼å­˜å‚¨ç»“æž„
 typedef struct Lnode
 {
 	int data;
 	struct Lnode *next;
-}Lnode;		//¶¨ÒåÁ´Ê½´æ´¢½á¹¹½á¹¹Ìå
+}Lnode;		//å®šä¹‰é“¾å¼å­˜å‚¨ç»“æž„ç»“æž„ä½“
 
 Lnode *L;
-L=(Lnode *)malloc(sizeof(Lnode));	//ÉêÇë´æ´¢¿Õ¼ä
+L=(Lnode *)malloc(sizeof(Lnode));	//ç”³è¯·å­˜å‚¨ç©ºé—´
 A->next=B;
 B->next=C;
 C->next=D;

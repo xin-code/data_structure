@@ -1,7 +1,7 @@
-int ´®±È½Ï(Str s1,Str s2)						//¶¨ÒåÁ½¸ö´® s1ºÍs2
+int ä¸²æ¯”è¾ƒ(Str s1,Str s2)						//å®šä¹‰ä¸¤ä¸ªä¸² s1å’Œs2
 {
-	for(int i=0;i<s1.length&&i<s2.length;++i)	//s1Óës2½ÏÐ¡µÄ´®
-		if(s1.ch[i]!=s2.ch[i])					//s1ºÍs2µÚÒ»¸ö×Ö·û²»µÈÊ±
-			return s1.ch[i]-s2.ch[i];			//·µ»Ø s1µÚÒ»¸ö×Ö·ûµÄASC¢ò¼õÈ¥s2µÄµÚÒ»¸ö×Ö·ûµÄASC¢ò Èç¹ûÎªÕýÊý£¬Ôòs1´óÓÚs2´®
-		return s1.length-s2.length;				//Îª0 s1=s2;ÎªÕý s1>s2;Îª¸º s1<s2
+	for(int i=0;i<s1.length&&i<s2.length;++i)	//s1ä¸Žs2è¾ƒå°çš„ä¸²
+		if(s1.ch[i]!=s2.ch[i])					//s1å’Œs2ç¬¬ä¸€ä¸ªå­—ç¬¦ä¸ç­‰æ—¶
+			return s1.ch[i]-s2.ch[i];			//è¿”å›ž s1ç¬¬ä¸€ä¸ªå­—ç¬¦çš„ASCâ…¡å‡åŽ»s2çš„ç¬¬ä¸€ä¸ªå­—ç¬¦çš„ASCâ…¡ å¦‚æžœä¸ºæ­£æ•°ï¼Œåˆ™s1å¤§äºŽs2ä¸²
+		return s1.length-s2.length;				//ä¸º0 s1=s2;ä¸ºæ­£ s1>s2;ä¸ºè´Ÿ s1<s2
 }

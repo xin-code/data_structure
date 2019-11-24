@@ -3,16 +3,16 @@ typedef struct DLnode
 	int data;
 	struct DLnode *prior;
 	struct DLnode *next;
-}DLnode;	//¶¨ÒåÒ»¸öË«Á´±í½á¹¹Ìå
+}DLnode;	//å®šä¹‰ä¸€ä¸ªåŒé“¾è¡¨ç»“æž„ä½“
 DLnode *L;
-L=(DLnode *)malloc(sizeof(DLnode));	//ÉêÇë´æ´¢¿Õ¼ä
+L=(DLnode *)malloc(sizeof(DLnode));	//ç”³è¯·å­˜å‚¨ç©ºé—´
 A->next=B; B->next=C; C->next=D;
 D->prior=C; C->prior=B; B->prior=A;
 
-´øÍ·½áµãµÄË«Á´±í
-//ÅÐ¿ÕÌõ¼þ:
+å¸¦å¤´ç»“ç‚¹çš„åŒé“¾è¡¨
+//åˆ¤ç©ºæ¡ä»¶:
 Head->next==NULL;
 
-²»´øÍ·½áµãµÄË«Á´±í
-//ÅÐ¿ÕÌõ¼þ:
+ä¸å¸¦å¤´ç»“ç‚¹çš„åŒé“¾è¡¨
+//åˆ¤ç©ºæ¡ä»¶:
 Head==NULL;

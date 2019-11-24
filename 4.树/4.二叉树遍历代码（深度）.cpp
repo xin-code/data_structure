@@ -1,12 +1,12 @@
-//使用递归算法
+//浣跨敤閫掑綊绠楁硶
 void r(BTNode)
 {
 	if(p!=NULL)
 	{
-		visit(p);//先序序列
+		visit(p);//鍏堝簭搴忓垪
 		r(p->lchild);
-		visit(p);//中序序列
+		visit(p);//涓簭搴忓垪
 		r(p->rchild);
-		visit(p);//后序序列
+		visit(p);//鍚庡簭搴忓垪
 	}
 }

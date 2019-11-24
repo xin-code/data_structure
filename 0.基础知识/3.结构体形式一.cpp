@@ -1,10 +1,10 @@
-//定义结构体student
+//瀹氫箟缁撴瀯浣搒tudent
 typedef struct
 {
 	int age;
 	float heigh;
 	char sex;
-}School;		//定义一个School类型的结构体
+}School;		//瀹氫箟涓�涓猄chool绫诲瀷鐨勭粨鏋勪綋
 
 #include<stdio.h>
 void main()
@@ -13,5 +13,5 @@ void main()
 	s.age=10;
 	s.heigh=175.5;
 	s.sex='M';
-    printf("age:%d\nheigh:%f\nsex:%c\n",s.age,s.heigh,s.sex);//输出
+    printf("age:%d\nheigh:%f\nsex:%c\n",s.age,s.heigh,s.sex);//杈撳嚭
 }
